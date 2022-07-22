@@ -1,3 +1,5 @@
+package homeWork;
+
 import java.util.Scanner;
 
 public class HW3LeapYear {
@@ -15,7 +17,7 @@ public class HW3LeapYear {
             }
 
         /*more efficient
-        if((year % 4 == && year 100 !=0) || year % 400 ==0) {
+        if((year % 4 == 0 && year 100 !=0) || year % 400 ==0) {
         System.out.println("Leap year");
         } else {
             System.out.println("Not a leap year");

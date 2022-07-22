@@ -1,3 +1,5 @@
+package homeWork;
+
 import java.util.Scanner;
 
 public class HW1 {
@@ -16,7 +18,7 @@ public class HW1 {
 
         /*answer
        import java.util.Scanner;
-public class HW1 {
+public class homeWork.HW1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your name");

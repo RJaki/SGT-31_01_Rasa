@@ -25,7 +25,7 @@ public class ArrayExamples {
         grades[9] = 1;
 
         //How to get Array's size
-        System.out.println("Array's size" + grades.length);
+        System.out.println("Array's size " + grades.length);
 
         //Print out all elements
         for (int i = 0; i < grades.length; i++){

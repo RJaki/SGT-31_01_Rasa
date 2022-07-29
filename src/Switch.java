@@ -1,7 +1,7 @@
 public class Switch {
     public static void main(String[] args) {
 
-        int month = 12;
+        int month = 4;
 
         if(month == 1){
             System.out.println("In January there is 31");

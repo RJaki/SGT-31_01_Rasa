@@ -1,7 +1,7 @@
 public class MathClass {
     public static void main(String[] args) {
 
-        float num = 5.999999999999f;
+        float num = 5.499999999999f;
         System.out.println(num);
 
         //Rounding down

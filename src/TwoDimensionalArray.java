@@ -1,7 +1,7 @@
 public class TwoDimensionalArray {
     public static void main(String[] args) {
 
-        int[][] age = new int[][]{{4,5,3,6,5},{34,44,28,38,41}};
+        int[][] age = new int[][]{ {4,5,3,6,5},{34,44,28,38,41}};
         //Print second column values
         System.out.println("Child - " + age[0][1]);
         System.out.println("Parent - " + age[1][1]);
@@ -33,10 +33,21 @@ public class TwoDimensionalArray {
         //j - columns
 
         for (int i = 0; i < names.length; i++){
-            System.out.println("Row no. " + (i+1));
+            System.out.print("Row no. " + (i+1) + " ");
             for (int j = 0; j < names[i].length; j++){
-                System.out.println(names[i][j]);
+                System.out.print(names[i][j] + " ");
             }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (String [] tempNames : names){
+            System.out.print("Row - ");
+            for (String name : tempNames){
+                System.out.print(name + " ");
+            }
+            System.out.println();
+
         }
 
 

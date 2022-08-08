@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class StringExamples {
     public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class StringExamples {
 
         String inputText = "This is my text";
 
-        //Length (shows how many char there is incl. spaces)
+        //Length (shows how many char there are incl. spaces)
         System.out.println(inputText.length());
 
         //To uppercase
@@ -48,6 +49,11 @@ public class StringExamples {
         //Character index
         System.out.println(textForTV.charAt(textForTV.length()-1));
         System.out.println(textForTV.charAt(5));
+        System.out.println(textForTV.charAt(4));
+        System.out.println(textForTV.charAt(3));
+        System.out.println(textForTV.charAt(2));
+        System.out.println(textForTV.charAt(1));
+        System.out.println(textForTV.charAt(0));
 
         //Substring
         System.out.println(textForTV.substring(5)); //starts from written index
@@ -64,11 +70,24 @@ public class StringExamples {
 
         System.out.println(Integer.parseInt(intValue)+4);
         System.out.println(Float.parseFloat(floatValue));
-        System.out.println(Double.parseDouble(floatValue));
+        System.out.println(Double.parseDouble(doubleValue));
         System.out.println(Boolean.parseBoolean(boolValue));
         System.out.println(Long.parseLong(longValue));
 
         //Test comment
+
+        //Trim method (delete spaces before and at the end
+        System.out.println("   This is test   ".trim());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter password (qwert*)");
+        String pswd = scanner.nextLine().trim().toLowerCase();
+        //Checks if pswd is correct
+        if (pswd.equals("qwerty")){
+            System.out.println("Password correct");
+        }else{
+            System.out.println("Incorrect password");
+        }
 
 
 

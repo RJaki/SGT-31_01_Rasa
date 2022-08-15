@@ -6,7 +6,7 @@ public class ChristmasTree {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input tree size");
+        System.out.println("basics.Input tree size");
         int size = scanner.nextInt();
         //Each level
         for (int i = 0; i < size; i++){

@@ -8,12 +8,16 @@ public class LeapYear2withMethods {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter any year");
         int year = scanner.nextInt();
-        determineLeapYear(year);//calling a method which is created 1st-ly
+        determineLeapYear(year);//calling a method
         determineLeapYear(1992);
         determineLeapYear(2004);
 
         //Homework additional task
+
         System.out.println(determineLeapYear1(year));
+        //or
+        String result =determineLeapYear1(1856);
+        System.out.println(result);
 
     }
     public static void determineLeapYear (int year){

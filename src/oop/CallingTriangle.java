@@ -14,14 +14,12 @@ public class CallingTriangle {
 
         //Creating triangle object
         Triangle triangle1 = new Triangle();
-        triangle1.setSide1(side1); //setting sides
+        triangle1.setSide1(side1);
         triangle1.setSide2(side2);
         triangle1.setSide3(side3);
 
-         //calling
         System.out.println(triangle1.triangleArea());
-        System.out.printf("Your triangles area is %.2f", triangle1.triangleArea());
-
+        System.out.printf("Your triangles area is %.2f cm2",triangle1.triangleArea());
 
     }
 }

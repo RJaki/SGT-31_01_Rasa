@@ -21,7 +21,8 @@ class Dog extends Animal{
 }
 public class AbstractClassExample {
     public static void main(String[] args) {
-        //Animal animal = new Animal ();
+        //Animal animal = new Animal (); due to abstract class animal object cannot be created
+
 
         Pig pig = new Pig();
         pig.sleep();

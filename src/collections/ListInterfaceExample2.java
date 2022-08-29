@@ -20,6 +20,7 @@ public class ListInterfaceExample2 {
         list2.add(6);
         list2.add(7);
         list2.add(8);
+        list2.addAll(list);
         System.out.println("List 2: " + list2);
 
         //Example 2

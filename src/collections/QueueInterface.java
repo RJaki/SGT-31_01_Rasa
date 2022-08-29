@@ -12,11 +12,13 @@ public class QueueInterface {
         System.out.println(car);
 
         car.offer("Toyota");
-
         System.out.println(car);
         System.out.println(car.offer("Toyota")); //gives true or false
+        System.out.println(car);
 
         System.out.println(car.peek());
+        System.out.println(car);
+
         System.out.println(car.poll());
         System.out.println(car);
 

@@ -30,7 +30,7 @@ public class MathClass {
         //Finding min value between two values
         System.out.println(Math.min(55,43));
 
-        //Randon value (1 to 20 in this case)
+        //Random value (1 to 20 in this case)
         System.out.println((int) (Math.random() * 20) +1); //usually 0-1, bet kadangi *20, tai max 20 ir +1, rodo, kad bus min 1.
 
         //Casting

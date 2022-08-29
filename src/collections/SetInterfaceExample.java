@@ -36,7 +36,7 @@ public class SetInterfaceExample {
             System.out.println(str);
         }
 
-        Iterator<String> i = names.iterator();// .iterator is inbuilded method
+        Iterator<String> i = names.iterator();// .iterator is in builted method
         while(i.hasNext()){ //checks if we have next element, then printout
             System.out.println(i.next());
         }

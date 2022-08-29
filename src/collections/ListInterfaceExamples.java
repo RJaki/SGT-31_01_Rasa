@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListInterfaceExamples {
     public static void main(String[] args) {
-        //Arraylist-class is a resizable array, which can be found in the java.until package
+        //Arraylist-class is a resizable array, which can be found in the java.util package
 
         //ArrayList Declaration
         ArrayList<String> car = new ArrayList<String>(); //<> must be used for ArrayList
@@ -22,7 +22,11 @@ public class ListInterfaceExamples {
         //Get elements by index
         System.out.println(car.get(0));
 
-        //Add element at specific index, pvzkad Ford butu su indeksu 2
+
+
+
+
+        //Add element at specific index, pvz kad Ford būtų su indeksu 2
         car.add(2,"Ford");
         System.out.println(car);
 

@@ -15,7 +15,6 @@ public class Vehicle {
 
     public Vehicle(){}
 
-
     //Method
     public void maxDistance (){
     //(float fuel, float fuelUsage, int passengers, float maxDistance){
@@ -28,14 +27,7 @@ public class Vehicle {
         }else{
             maxDistance = fuel/fuelUsage* 100f;
             System.out.printf("maxDistance ( %.1f, %.1f, %d) -> %.2f",fuel,fuelUsage,passengers,maxDistance);
-
         }
-
     }
-    /*public void printVehicleInfo (float fuel,float fuelUsage, int passengers, float maxDistance) {
-        //super(fuel,fuelUsage,passengers,maxDistance);
-        System.out.printf("maxDistance ( %.2f, %.2f, %d) -> %.2f",fuel,fuelUsage,passengers,maxDistance);
-    }*/
-
 }
 

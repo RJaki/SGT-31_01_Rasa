@@ -4,12 +4,24 @@ public class Car extends Vehicle{
     public boolean airConditioner;
 
     public Car(float fuel, float fuelUsage, int passengers, boolean airConditioner){
-        super(fuel, fuelUsage, passengers);
+        super(fuel, fuelUsage, passengers);//re-using customer constructor
         this.airConditioner = airConditioner;
     }
 
+    public float maxDistance(){
+        float airConditionerAdd;
+        if (airConditioner){
+            airConditionerAdd=1.1f;
+        }else {
+            airConditionerAdd = 1f;
+        }
+        float usage = fuelUsage * (1+ passengers * 0.05f);
+        float maxDistance = fuel /(usage * airConditionerAdd)*100;
+        return maxDistance;
+    }
 
-    public void maxDistance (float fuel, float fuelUsage, int passengers, boolean airConditioner){
+    //Mine solution
+    /*public void maxDistance (float fuel, float fuelUsage, int passengers, boolean airConditioner){
         float maxDistance;
         float fuelUsageIndex;
 
@@ -33,7 +45,7 @@ public class Car extends Vehicle{
                 System.out.printf("maxDistance (%.1f, %.1f, %d, %b) -> %.2f",fuel,fuelUsage,passengers,false, maxDistance);
             }
         }
-    }
+    }*/
 
 
 }

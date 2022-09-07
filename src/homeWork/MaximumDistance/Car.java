@@ -4,7 +4,7 @@ public class Car extends Vehicle{
     public boolean airConditioner;
 
     public Car(float fuel, float fuelUsage, int passengers, boolean airConditioner){
-        super(fuel, fuelUsage, passengers);//re-using customer constructor
+        super(fuel, fuelUsage, passengers);//re-using custom constructor
         this.airConditioner = airConditioner;
     }
 

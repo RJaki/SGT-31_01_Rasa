@@ -16,7 +16,7 @@ public class TestingDBConnection {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM users");
 
-            while(rs.next()){ //geting information from SQL data base "user"
+            while(rs.next()){ //getting information from SQL database "user"
                 System.out.printf("ID %d username: %s password: %s full name: %s email: %s\n",
                         rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
             }

@@ -1,22 +1,22 @@
 package db.WLT;
 
-public class Drivers {
+public class DriversInfo {
     //Fields
-    protected String dlid;
-    protected String password;
-    protected String name;
-    protected String surname;
+    private String dlid;
+    private String pswrd;
+    private String name;
+    private String surname;
 
     //Setters and getters
 
 
     public void setDlid(String dlid) {this.dlid = dlid;}
-    public void setPassword(String password) {this.password = password;}
+    public void setPswrd(String pswrd) {this.pswrd = pswrd;}
     public void setName(String name) {this.name = name;}
     public void setSurname(String surname) {this.surname = surname;}
 
     public String getDlid() {return dlid;}
-    public String getPassword() {return password;}
+    public String getpswrd() {return pswrd;}
     public String getName() {return name;}
     public String getSurname() {return surname;}
 

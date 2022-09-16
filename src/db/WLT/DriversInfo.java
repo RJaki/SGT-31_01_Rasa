@@ -21,15 +21,6 @@ public class DriversInfo {
     public String getSurname() {return surname;}
 
 
-    //Methods
-    //Login method and checking
-    /*public void login(){
-        UserInfo existingUserID = new UserInfo();
-        System.out.println("Enter your ID number");
-
-
-        System.out.println("Enter your password");
-    }*/
 
     //Check registration
     //Check license id number

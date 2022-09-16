@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 
 public class Main {
-    static int existingUser = 0; //pvz vadinasi int currentUserId = 0;
+    static int existingUser = 0; //pvz = int currentUserId = 0;
     static String dbURL = "jdbc:mysql://localhost:3306/java31";
     static String username = "root";
     static String password = "admin";
@@ -35,13 +35,12 @@ public class Main {
                     System.out.println("Do you want to start job at us?");
                     System.out.println("Choose 'r' or 'q'");
                     System.out.println("r - register new driver");
-                    System.out.println("q and other characters - quit");
+                    System.out.println("q or other characters - quit");
                     String result = scanner.nextLine();
 
                     if (result.toLowerCase().equals("r")){
                         createUser();
 
-                        //driverReg(conn, String.valueOf(newdlid), newpswrd, newName, newSurname);
 
                     } else {
                         System.out.println("Good luck!");
@@ -60,7 +59,7 @@ public class Main {
 
     public static void userLogIn() { //pvz login
         DriversInfo driversLogInfo = new DriversInfo();
-        //mano driversInfo = currentUser
+        //mano driversLogInfo = currentUser
 
         System.out.println("Enter driver`s license number");
         driversLogInfo.setDlid(scanner.nextLine());
@@ -71,9 +70,11 @@ public class Main {
         //DataBase class method for login check returns existing driver license No.
         //kas yra userId????
         int userId = dataBase.checkDlidAndPswrd(driversLogInfo.getDlid(), driversLogInfo.getpswrd());
-        if (userId > 0) {
+        if (userId>0) {
             System.out.println("You have logged in successfully!");
             existingUser = userId;
+        } else {
+            System.out.println("Password or username incorrect");
         }
     }
 
@@ -97,30 +98,30 @@ public class Main {
         //DataBase class method for dlid check returns 1 if true, 0 if false
         int userId = dataBase.checkDlid(newDriver.getDlid());
 
-        while (userId > 0 ) {
+        while (userId>0) {
             System.out.println("This driver license number already exists! Please check and enter correct number!");
             newDriver.setDlid(scanner.nextLine());
-            pattern = Pattern.compile("[0-9]{8}");
+            pattern = Pattern.compile("[0-9]{5}");
             matcher = pattern.matcher(newDriver.getDlid());
             while (matcher.matches() == false) {
 
-                System.out.println("Please enter a driver`s license number! It should be 8 numbers.");
+                System.out.println("Please enter a driver`s license number! It should be 5 numbers.");
                 newDriver.setDlid(scanner.nextLine());
-                pattern = Pattern.compile("[0-9]{8}");
+                pattern = Pattern.compile("[0-9]{5}");
                 matcher = pattern.matcher(newDriver.getDlid());
             }
             userId = dataBase.checkDlid(newDriver.getDlid());
         }
 
-        System.out.println("Enter password (at least 6 characters including at least 1 number, 1 letter and 1 symbol)");
+        System.out.println("Please enter your password");
         newDriver.setPswrd(scanner.nextLine());
 
-        pattern = Pattern.compile("^(?=.*[0-9])"+"(?=.*[a-z])|(?=.*[A-Z])"+"(?=.*[@#$%^&+=]).{6,20}$");
+        pattern = Pattern.compile("[a-zA-Z]{7}[0-9]");
         matcher = pattern.matcher(newDriver.getpswrd());
         while (matcher.matches()== false) {
-            System.out.println("Password must contain at least one number, letter and symbol, please enter valid password!");
+            System.out.println("7 letters and 1 digit, please enter valid password!");
             newDriver.setPswrd(scanner.nextLine());
-            pattern = Pattern.compile("^(?=.*[0-9])"+"(?=.*[a-z])|(?=.*[A-Z])"+"(?=.*[@#$%^&+=]).{6,20}$");
+            pattern = Pattern.compile("[a-zA-Z]{7}[0-9]");
             matcher = pattern.matcher(newDriver.getpswrd());
         }
 
@@ -144,7 +145,7 @@ public class Main {
             System.out.println("Please enter valid surname!");
             newDriver.setSurname(scanner.nextLine());
             pattern = Pattern.compile("[A-Za-z]{2,45}");
-            matcher = pattern.matcher(newDriver.getName());
+            matcher = pattern.matcher(newDriver.getSurname());
         }
 
 
@@ -159,32 +160,6 @@ public class Main {
 
 
         }
-
-
-
-
-
-        /*String dlid = null;
-        String pswrd = null;
-        //String userExistingIngDB;
-        Scanner scanner = new Scanner(System.in);
-
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java31", "root", "admin")) {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM drivers");
-            //System.out.println("Connected!");
-            do {
-                System.out.println("Enter driver`s license number");
-                String newdlid = scanner.nextLine().trim();
-                //existingUser.setnewdlid(dlid);
-                System.out.println("Enter password");
-                String newpswrd = scanner.nextLine();
-            } while (checkdlidAndPswrd(conn,dlid,pswrd)!=1);
-
-        } catch (SQLException e) {
-            System.out.println("No connection" + e);
-        }*/
-
 
 
 
